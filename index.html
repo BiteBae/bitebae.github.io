@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDF Viewer with Map</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiteBae Access</title>
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff5df, #ffe4e1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
-    #mapBtn {
-      position: absolute;
-      top: 2vh;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      padding: 1em 2em;
-      font-size: 1.2em;
-      background: #007bff;
+
+    .logo {
+      margin-top: 2rem;
+      width: 200px;
+      height: auto;
+    }
+
+    .button-container {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .button {
+      padding: 1.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 1rem;
+      border: none;
       color: white;
-      border: none;
-      border-radius: 0.5em;
-      cursor: pointer;
+      background: linear-gradient(135deg, #f58a8a, #e76f51);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <button id="mapBtn" onclick="window.open('https://maps.app.goo.gl/Tddzc1fbWJSSp1Ls9', '_blank')">
-    Open Location
-  </button>
-  <iframe src="https://drive.google.com/file/d/17pxOSW2a94GIl3bRFwQsfqQpbFazs4-O/preview"></iframe>
+
+  <!-- Logo -->
+  <img src="logo.png" alt="BiteBae Logo" class="logo" />
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <a href="https://maps.app.goo.gl/Tddzc1fbWJSSp1Ls9" target="_blank" class="button">
+      📍 Open Location
+    </a>
+    <a href="https://drive.google.com/file/d/17pxOSW2a94GIl3bRFwQsfqQpbFazs4-O/view?usp=sharing" target="_blank" class="button">
+      📄 View Menu
+    </a>
+  </div>
+
+  <footer>
+    © 2025 BiteBae. Designed with love 🍓
+  </footer>
+
 </body>
 </html>

@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>PDF Viewer</title>
-		<style>
-			html,
-			body {
-				margin: 0;
-				height: 100%;
-			}
-			iframe {
-				width: 100%;
-				height: 100%;
-				border: none;
-			}
-			#mapBtn {
-				position: absolute;
-				top: 20px;
-				left: 50%;
-				transform: translateX(-50%);
-				z-index: 10;
-				padding: 10px 20px;
-				font-size: 16px;
-				background: #007bff;
-				color: white;
-				border: none;
-				border-radius: 6px;
-				cursor: pointer;
-				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-				margin-bottom: 20px;
-			}
-		</style>
-	</head>
-	<body>
-		<button
-			id="mapBtn"
-			onclick="window.location.href='https://maps.app.goo.gl/Tddzc1fbWJSSp1Ls9'"
-		>
-			Open Location
-		</button>
-		<iframe src="menu.pdf"></iframe>
-	</body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer with Map</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #mapBtn {
+      position: absolute;
+      top: 2vh;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0.5em;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="mapBtn" onclick="window.open('https://maps.app.goo.gl/Tddzc1fbWJSSp1Ls9', '_blank')">
+    Open Location
+  </button>
+  <iframe src="https://drive.google.com/file/d/17pxOSW2a94GIl3bRFwQsfqQpbFazs4-O/preview"></iframe>
+</body>
 </html>
